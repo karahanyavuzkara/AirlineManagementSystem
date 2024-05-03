@@ -41,4 +41,12 @@ public class Passenger {
         public String getEmail(){
         return email;
         }
+
+        public void print() {
+            System.out.println("id: "+ getId());
+            System.out.println("Name: "+getFirstName()+" "+getLastName());
+            System.out.println("Tel: "+getTel());
+            System.out.println("Email: "+getEmail());
+            System.out.println();
+        }
     }

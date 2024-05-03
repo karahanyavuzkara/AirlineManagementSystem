@@ -35,17 +35,21 @@ public class Database {
         return p;
     }
 
-    public Passenger getPassenger(String firstName) throws SQLException {
+    public Passenger getPassenger(String firstName, String lastName) throws SQLException {
         String get = "SELECT `id`, `firstName`, `lastName`, `Tel`, `email` FROM `passengers` WHERE`firstName' = "+firstName+";";
         ResultSet rs = statement.executeQuery(get);
-        Passenger p = new Passenger();
-        rs.next();
-        p.setId(Integer.parseInt(rs.getString("id")));
-        p.setFirstName(rs.getString("firstName"));
-        p.setLastName(rs.getString("lastName"));
-        p.setTel(rs.getString("Tel"));
-        p.setEmail(rs.getString("email"));
-        return p;
+        Passenger passenger = new Passenger();
+        while (rs.next()) {
+            Passenger p = new Passenger();
+            p.setId(Integer.parseInt(rs.getString("id")));
+            p.setFirstName(rs.getString("firstName"));
+            p.setLastName(rs.getString("lastName"));
+            p.setTel(rs.getString("Tel"));
+            p.setEmail(rs.getString("email"));
+
+            if (p.getLastName().equals(lastName)) passenger = p; break;
+        }
+        return passenger;
     }
 
         public static void editPassenger(Passenger p) throws SQLException {

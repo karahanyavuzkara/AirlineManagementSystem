@@ -64,22 +64,20 @@ public class PassengersController {
         System.out.println("Passenger edited successfully!");
 
     }
-    public static void findPassengerIdByName(Database database, Scanner s) {
+    public static void findPassengerIdByName(Database database, Scanner s) throws SQLException {
         System.out.println("Enter first name: ");
         String firstName = s.next();
         System.out.println("Enter last name: ");
         String lastName = s.next();
+        Passenger p = database.getPassenger(firstName, lastName);
+        p.print();
 
     }
     public static void printAllPassengers(Database database) throws SQLException{
         ArrayList<Passenger> passengers = database.getAllPassengers();
         System.out.println("\n---------------------------");
         for (Passenger p : passengers) {
-            System.out.println("id: "+p.getId());
-            System.out.println("Name: "+p.getFirstName()+" "+ p.getLastName());
-            System.out.println("Tel: "+p.getTel());
-            System.out.println("Email: "+ p.getEmail());
-            System.out.println();
+            p.print();
         }
         System.out.println("---------------------------");
 
