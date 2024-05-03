@@ -36,10 +36,11 @@ public class Database {
     }
 
     public Passenger getPassenger(String firstName, String lastName) throws SQLException {
-        String get = "SELECT `id`, `firstName`, `lastName`, `Tel`, `email` FROM `passengers` WHERE`firstName' = "+firstName+";";
+        String get = "SELECT `id`, `firstName`, `lastName`, `Tel`, `email` FROM `passengers` WHERE`firstName' = \""+firstName+"\";";
         ResultSet rs = statement.executeQuery(get);
         Passenger passenger = new Passenger();
         while (rs.next()) {
+            rs.next();
             Passenger p = new Passenger();
             p.setId(Integer.parseInt(rs.getString("id")));
             p.setFirstName(rs.getString("firstName"));
