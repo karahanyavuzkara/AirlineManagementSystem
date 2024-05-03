@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74ac4a89-cba5-45d5-a047-72926ad4bcb8" name="Changes" comment="creating the project and making the db connection">
-      <change afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PassengersController.java" afterDir="false" />
+    <list default="true" id="74ac4a89-cba5-45d5-a047-72926ad4bcb8" name="Changes" comment="db connection and creating passengers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PassengersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PassengersController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,8 @@
       <updated>1714226326530</updated>
       <workItem from="1714226327957" duration="2425000" />
       <workItem from="1714316406347" duration="1940000" />
-      <workItem from="1714337089540" duration="4793000" />
+      <workItem from="1714337089540" duration="4916000" />
+      <workItem from="1714763402757" duration="1629000" />
     </task>
     <task id="LOCAL-00001" summary="creating the project and making the db connection">
       <created>1714316935819</created>
@@ -88,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714316935819</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="db connection and creating passengers">
+      <created>1714342029283</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714342029283</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +104,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creating the project and making the db connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating the project and making the db connection" />
+    <MESSAGE value="db connection and creating passengers" />
+    <option name="LAST_COMMIT_MESSAGE" value="db connection and creating passengers" />
   </component>
 </project>
