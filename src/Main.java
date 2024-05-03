@@ -14,16 +14,23 @@ public class Main {
         do {
             System.out.println("Welcome to Airline Management System");
             System.out.println("1. Add new passenger");
-            System.out.println("2.Edit passenger");
-            System.out.println("3. Quit");
+            System.out.println("2. Get passenger id by name");
+            System.out.println("3.Edit passenger");
+            System.out.println("4. Quit");
 
             i = s.nextInt();
             switch (i) {
                 case 1:
                     PassengersController.AddNewPassenger(database, s);
                     break;
+                case 2:
+                    PassengersController.findPassengerIdByName(database, s);
+                    break;
+                case 3:
+                    PassengersController.EditPassenger(database, s);
+                    break;
             }
-        }while (i!=3);
+        }while (i!=4);
 
     }
 }

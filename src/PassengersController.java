@@ -58,8 +58,18 @@ public class PassengersController {
 
         passenger.setFirstName(firstName);
         passenger.setLastName(lastName);
-        passenger.setEmail(email);
         passenger.setTel(Tel);
+        passenger.setEmail(email);
+        database.editPassenger(passenger);
+        System.out.println("Passenger edited successfully!");
+
+    }
+    public static void findPassengerIdByName(Database database, Scanner s) {
+        System.out.println("Enter first name: ");
+        String firstName = s.next();
+        System.out.println("Enter last name: ");
+        String lastName = s.next();
+
     }
     public static void printAllPassengers(Database database) throws SQLException{
         ArrayList<Passenger> passengers = database.getAllPassengers();
